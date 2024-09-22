@@ -1,0 +1,77 @@
+Desafio:
+
+1. Criação das tabelas:
+
+------------------------------
+
+Cadetes: 
+
+id_cadete: Chave primária para identificar cada cadete de forma única.
+
+nome: Nome completo do cadete.
+
+idade: Idade do cadete.
+
+patente: Patente do cadete (Soldado, Cabo, Sargento, etc.).
+
+data_ingresso: Data em que o cadete ingressou na academia militar.
+
+-----------------------------------------------------------------------------------------
+
+Instrutores: 
+
+id_instrutor: Chave primária para identificar cada instrutor de forma única.
+
+nome: Nome do instrutor.
+
+especialidade: Área de especialização do instrutor (por exemplo, Tática Militar, Logística).
+
+patente: Patente do instrutor (Capitão, Tenente, etc.).
+
+-------------------------------------------------------------------------------------------
+
+Cursos: 
+
+id_curso: Chave primária para identificar cada curso.
+
+nome_curso: Nome do curso (por exemplo, Estratégia Militar, Comunicações de Campo).
+
+duracao_weeks: Duração do curso em semanas.
+
+id_instrutor: Chave estrangeira que referencia o instrutor que ministra o curso.
+
+--------------------------------------------------------------------------------------------
+
+Treinamentos:
+
+id_treinamento: Chave primária para identificar cada treinamento.
+
+nome_treinamento: Nome do treinamento (por exemplo, Treinamento de Sobrevivência, Treinamento Físico Avançado).
+
+duracao_days: Duração do treinamento em dias.
+
+id_instrutor: Chave estrangeira que referencia o instrutor que ministra o treinamento.
+
+--------------------------------------------------------------------------------------------
+
+Turmas:
+
+id_turma: Chave primária para identificar cada turma.
+
+id_cadete: Chave estrangeira que referencia o cadete na turma.
+
+id_curso: Chave estrangeira que referencia o curso ao qual a turma está associada.
+
+id_treinamento: Chave estrangeira que referencia o treinamento ao qual a turma está associada.
+
+---------------------------------------------------------------------------------------------
+
+Regras:
+
+1 - Um cadete pode se inscrever em vários cursos e treinamentos.
+
+2 - Cada curso ou treinamento é ministrado por um único instrutor.
+
+3 - Instrutores podem ser responsáveis por vários cursos e treinamentos.
+
+4 - Cada turma tem vários cadetes inscritos e é associada a um curso ou treinamento
